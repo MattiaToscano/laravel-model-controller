@@ -7,13 +7,9 @@ use Illuminate\Http\Request;
 
 class MovieController extends Controller
 {
-    public function movie() {
-        $movie = Movie::all();
-
-        dd($movie);
-
-
-        return view("movie", compact('movie'));
-
+    public function index() {
+        $movies = Movie::all();
+        return view("movie", compact('movies'));
     }
+
 }
